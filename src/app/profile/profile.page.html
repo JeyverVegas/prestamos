@@ -1,0 +1,32 @@
+<app-top-bar title="Profile" backButton="true" options="true"></app-top-bar>
+
+<ion-content color="primary" class="ion-padding">
+  <div class="ion-text-center" style="position: relative;">
+    <img style="width: 150px; height: 150px; border-radius: 50%;" src="../../assets/images/profile/user1.jpeg" alt="">
+    <ion-button class="add-button" color="secondary">
+      <ion-icon name="add" slot="icon-only" color="light"></ion-icon>
+    </ion-button>
+  </div>
+
+
+  <ion-item class="ion-margin-top input-form">
+    <ion-label position="floating" color="light">Nombre y Apellido</ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-form">
+    <ion-label position="floating" color="light">Dirección</ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+
+  <br>
+  <br>
+
+  <div class="ion-text-center">
+    <ion-button mode="ios" shape="round" color="secondary">
+      <ion-label color="light">
+        Guardar Cambios
+      </ion-label>
+    </ion-button>
+  </div>
+</ion-content>

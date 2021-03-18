@@ -1,0 +1,35 @@
+<app-top-bar title="Prestamos" backButton="true" options="true"></app-top-bar>
+
+<ion-content color="primary">
+
+  <ion-segment [(ngModel)]="show" mode="md" color="secondary">
+    <ion-segment-button value="active">
+      <ion-label color="light">Activos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="finish">
+      <ion-label color="light">Terminados</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-searchbar mode="ios" color="light">
+
+  </ion-searchbar>
+
+  <div class="ion-padding" *ngIf="show == 'active'">
+    <h1>
+      Activos
+    </h1>
+
+    <app-transaction-list (click)="showLoan(prestamo)" *ngFor="let prestamo of prestamos" [value]="prestamo.value"
+      [description]="prestamo.description"></app-transaction-list>
+  </div>
+
+  <div class="ion-padding" *ngIf="show == 'finish'">
+    <h1>
+      Terminados
+    </h1>
+
+    <app-transaction-list (click)="showLoan(prestamo)" *ngFor="let prestamo of prestamos" [value]="prestamo.value"
+      [description]="prestamo.description"></app-transaction-list>
+  </div>
+</ion-content>

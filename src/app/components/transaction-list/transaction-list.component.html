@@ -1,0 +1,10 @@
+<ion-item class="transaction" lines="none" button detail>
+  <ion-icon class="icon-transaccion" name="cash-outline" slot="start" color="light"></ion-icon>
+  <ion-label>
+    <h3 *ngIf="description">{{description}}</h3>
+    <p *ngIf="value">${{value}}</p>
+    <p *ngIf="userName">
+      <ion-icon name="person-outline" color="secondary"></ion-icon> {{userName}}
+    </p>
+  </ion-label>
+</ion-item>

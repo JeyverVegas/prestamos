@@ -1,0 +1,35 @@
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-button (click)="goBack()">
+      <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Prestamistas</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="addClient()">
+      <ion-icon name="add" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content color="primary">
+  <ion-item *ngFor="let client of clients" (click)="addClient(client)" color="primary" detail button>
+    <ion-avatar slot="start">
+      <ion-img [src]="client.image"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <p>
+        {{client.created_at | date:'dd'}}/{{client.created_at | date:'MM'}}/{{client.created_at | date:'yyyy'}}
+      </p>
+      <h3>{{client.name}}</h3>
+    </ion-label>
+    <ion-buttons slot="end">
+      <ion-button color="secondary">
+        <ion-label>
+          {{client.loans.length}}
+        </ion-label>
+        <ion-icon name="cash-outline" slot="end"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-content>

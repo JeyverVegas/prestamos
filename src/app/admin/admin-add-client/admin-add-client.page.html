@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{user?.name ? user.name : 'Añadir nuevo'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" class="ion-padding">
+
+  <div class="ion-text-center" style="position: relative;">
+    <img style="width: 150px; height: 150px; border-radius: 50%;" src="../../assets/images/profile/user1.jpeg" alt="">
+    <ion-button class="add-button" color="secondary">
+      <ion-icon name="add" slot="icon-only" color="light"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-item class="ion-margin-top input-form">
+    <ion-label position="floating" color="light">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Usuario*
+    </ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top input-form">
+    <ion-label position="floating" color="light">
+      <ion-icon name="lock-closed" slot="start"></ion-icon>
+      Contraseña*
+    </ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <ion-item class="ion-margin-top input-form">
+    <ion-label position="floating" color="light">
+      <ion-icon name="person" slot="start"></ion-icon>
+      Nombre y Apellido
+    </ion-label>
+    <ion-input [(ngModel)]="name"></ion-input>
+  </ion-item>
+
+  <ion-item class="input-form">
+    <ion-label position="floating" color="light">
+      <ion-icon name="location" slot="start"></ion-icon>
+      Dirección
+    </ion-label>
+    <ion-input [(ngModel)]="address"></ion-input>
+  </ion-item>
+
+  <br>
+  <br>
+
+  <div class="ion-text-center" (click)="saveUser()">
+    <ion-button mode="ios" shape="round" color="secondary">
+      <ion-label color="light">
+        Guardar Cambios
+      </ion-label>
+    </ion-button>
+  </div>
+
+</ion-content>

@@ -1,3 +1,80 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="end" menuId="client" contentId="main" swipeGesture="false">
+    <ion-header class="ion-padding bg-primary ion-no-border">
+      <div class="ion-text-center">
+        <img style="width: 100px; height: 100px; border-radius: 50%;" src="../assets/images/profile/user1.jpeg" alt="">
+        <h2>
+          <ion-text color="light">
+            Carlos Vicuña
+          </ion-text>
+        </h2>
+      </div>
+    </ion-header>
+    <ion-content color="primary">
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/dash-board">
+          <ion-icon name="bar-chart-outline" color="secondary" slot="start"></ion-icon>
+          DashBoard
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/profile">
+          <ion-icon name="person-outline" color="secondary" slot="start"></ion-icon>
+          Mi Perfil
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/loan">
+          <ion-icon name="cash-outline" slot="start" color="secondary"></ion-icon>
+          Mis Prestamos
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button (click)="logOut()">
+          <ion-icon name="log-out" color="secondary" slot="start"></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+
+  <ion-menu side="end" menuId="admin" contentId="main" swipeGesture="false">
+    <ion-header class="ion-padding bg-primary ion-no-border">
+      <div class="ion-text-center">
+        <img style="width: 100px; height: 100px; border-radius: 50%;" src="../assets/images/profile/user1.jpeg" alt="">
+        <h2>
+          <ion-text color="light">
+            Administrador
+          </ion-text>
+        </h2>
+      </div>
+    </ion-header>
+    <ion-content color="primary">
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/dash-board">
+          <ion-icon name="bar-chart-outline" color="secondary" slot="start"></ion-icon>
+          DashBoard
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/admin-clients">
+          <ion-icon name="person-outline" color="secondary" slot="start"></ion-icon>
+          Prestamistas
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button routerLink="/admin-loans">
+          <ion-icon name="cash-outline" slot="start" color="secondary"></ion-icon>
+          Prestamos
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item color="primary" lines detail button (click)="logOut()">
+          <ion-icon name="log-out" color="secondary" slot="start"></ion-icon>
+          Cerrar Sesion
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

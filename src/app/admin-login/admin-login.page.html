@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary" class="ion-padding">
+
+
+  <h1>
+    Administrador
+  </h1>
+
+
+  <ion-item class="input-form" lines="none">
+    <ion-label position="floating" color="light">
+      <ion-icon name="person" color="light" slot="start"></ion-icon>
+      Usuario
+    </ion-label>
+    <ion-input [(ngModel)]="userName"></ion-input>
+  </ion-item>
+  <br>
+  <ion-item class="input-form" lines="none">
+    <ion-label position="floating" color="light">
+      <ion-icon name="lock-closed" color="light" slot="start"></ion-icon>
+      Password
+    </ion-label>
+    <ion-input [(ngModel)]="password" type="password"></ion-input>
+  </ion-item>
+
+  <div class="ion-text-center ion-margin-vertical">
+    <ion-button expand="block" mode="ios" shape="round" color="secondary" (click)="login()">
+      <ion-label color="light">
+        Iniciar Sesión
+      </ion-label>
+      <ion-icon slot="end" color="light" name="log-in-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+</ion-content>

@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,62 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+@import "~animate.css/animate.min";
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+@import "./theme/custom-loading.scss";
+@import "./theme/backgrounds-theming.scss";
+
+.ion-margin-vertical {
+  margin: 40px 0;
+}
+
+.dashboard-money {
+  margin: 0 0;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.transaction {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--ion-color-primary-contrast);
+  margin: 10px 0;
+  --background: transparent;
+  border-radius: 15px;
+  .icon-transaccion {
+    background: var(--ion-color-secondary);
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
+
+.input-form {
+  --background: transparent;
+  color: white;
+  font-size: 20px;
+  border-bottom: 1px solid white;
+}
+
+.add-button {
+  bottom: -10px;
+  left: 50%;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  --padding-start: 0;
+  --padding-end: 0;
+  --border-radius: 50%;
+}
+
+.segment-secondary {
+  ion-segment-button {
+    /* --background: var(--ion-color-primary);
+    --color: var(--ion-color-primary-contrast); */
+    --color-checked: var(--ion-color-primary-contrast);
+    --background-checked: var(--ion-color-secondary);
+  }
+}
+
+.display-resumen {
+  border-bottom: 1px solid var(--ion-color-secondary);
+}

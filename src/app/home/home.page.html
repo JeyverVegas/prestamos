@@ -1,20 +1,47 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="bg-login">
+    <div *ngIf="!welcomeFinish" class="welcome">
+      <div class="welcome-info ion-padding">
+        <div class="ion-text-center ion-padding">
+          <img class="logo animate__animated animate__fadeInUp" src="../../assets/images/logo.png" alt="logo">
+          <img class="animate__animated animate__fadeInUp" src="../../assets/images/logo-letra.png" alt="logo-letras">
+        </div>
+        <h1 class="animate__animated animate__fadeInLeft" style="margin: 0;">
+          <ion-text color="light">
+            Bienvenido
+          </ion-text>
+        </h1>
+      </div>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div *ngIf="welcomeFinish" class="login animate__animated animate__fadeInUp">
+      <div class="login-form ion-padding">
+        <ion-text color="light">
+          <h1 style="font-size: 35px;">
+            ¡Bienvenido a Prestamos!
+          </h1>
+          <p>
+            una app diseñada para mantener el control de los prestamos.
+          </p>
+        </ion-text>
+
+        <div class="ion-text-center ion-margin-vertical">
+          <ion-button expand="block" mode="ios" shape="round" color="tertiary" (click)="next('client-login')">
+            <ion-label color="light">
+              Prestamista
+            </ion-label>
+          </ion-button>
+        </div>
+
+        <div class="ion-text-center ion-margin-vertical">
+          <ion-button expand="block" mode="ios" shape="round" color="secondary" (click)="next('admin-login')">
+            <ion-label color="light">
+              Administrador
+            </ion-label>
+          </ion-button>
+        </div>
+
+      </div>
+    </div>
   </div>
 </ion-content>

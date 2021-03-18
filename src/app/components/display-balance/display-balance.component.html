@@ -1,0 +1,12 @@
+<ion-item color="primary" button mode="md" detail>
+  <ion-label>
+    <P>{{label}}</P>
+    <h1>
+      ${{value}}
+    </h1>
+  </ion-label>
+  <ion-badge *ngIf="profits" color="secondary" slot="end">
+    %{{profits}}
+    <ion-icon name="arrow-up-outline"></ion-icon>
+  </ion-badge>
+</ion-item>
